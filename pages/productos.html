@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Productos</title>
+    <!--Codigo Booststrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="icon" type="image/png" href="../img/carrito-de-compras.png">
+
+
+</head>
+
+<body>
+    <header class="bg-light border-bottom">
+        <nav class="container navbar navbar-expand-md navbar-light">
+            <a class="navbar-brand bold" href="../index.html">Mi Tienda</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainnav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mainNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html">Inicio
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="../pages/productos.html">Productos
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../pages/contacto.html">Contacto
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../pages/carrito.html">Carrito
+                            <i class="bi bi-cart"></i>(<span id="cart-count">0</span>) <!--Añadir que falta-->
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Lista de Productos -->
+    <main class="container my-4">
+        <h1 class="h3 mb-4 text-center">Todos los Productos</h1>
+        <div class="row">
+            <!-- Producto 1 -->
+            <div class="col-6 col-md-3 mb-4">
+                <div class="card h-100">
+                    <img src="../img/SMARTPHONE_600X600.jpeg" class="card-img-top img-fluid" alt="Smartphone XYZ">
+                    <div class="card-body text-center d-flex flex-column">
+                        <h5 class="card-title">Smartphone XYZ</h5>
+                        <p class="text-success fw-bold mb-1">$500</p>
+                        <button class="btn btn-primary mt-auto add-to-cart" data-id="1" data-name="Smartphone XYZ"
+                            data-price="500">
+                            Agregar al carrito
+                        </button>
+                        <button class="btn btn-link mt-2" data-bs-toggle="modal" data-bs-target="#product1Modal">
+                            Ver detalles
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!-- Producto 2 -->
+            <div class="col-6 col-md-3 mb-4">
+                <div class="card h-100">
+                    <img src="../img/LAPTOP_600X600.jpeg" class="card-img-top img-fluid" alt="Laptop ABC">
+                    <div class="card-body text-center d-flex flex-column">
+                        <h5 class="card-title">Laptop ABC</h5>
+                        <p class="text-success fw-bold mb-1">$1000</p>
+                        <button class="btn btn-primary mt-auto add-to-cart" data-id="2" data-name="Laptop ABC"
+                            data-price="1000">
+                            Agregar al carrito
+                        </button>
+                        <button class="btn btn-link mt-2" data-bs-toggle="modal" data-bs-target="#product2Modal">
+                            Ver detalles
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!-- Producto 3 -->
+            <div class="col-6 col-md-3 mb-4">
+                <div class="card h-100">
+                    <img src="../img/AUDIFONOS_600X600.jpeg" class="card-img-top img-fluid" alt="Auriculares XYZ">
+                    <div class="card-body text-center d-flex flex-column">
+                        <h5 class="card-title">Auriculares XYZ</h5>
+                        <p class="text-success fw-bold mb-1">$150</p>
+                        <button class="btn btn-primary mt-auto add-to-cart" data-id="3" data-name="Auriculares XYZ"
+                            data-price="150">
+                            Agregar al carrito
+                        </button>
+                        <button class="btn btn-link mt-2" data-bs-toggle="modal" data-bs-target="#product3Modal">
+                            Ver detalles
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!-- Producto 4 -->
+            <div class="col-6 col-md-3 mb-4">
+                <div class="card h-100">
+                    <img src="../img/CAMARA_600X600.jpeg" class="card-img-top img-fluid" alt="Cámara DEF">
+                    <div class="card-body text-center d-flex flex-column">
+                        <h5 class="card-title">Cámara DEF</h5>
+                        <p class="text-success fw-bold mb-1">$300</p>
+                        <button class="btn btn-primary mt-auto add-to-cart" data-id="4" data-name="Cámara DEF"
+                            data-price="300">
+                            Agregar al carrito
+                        </button>
+                        <button class="btn btn-link mt-2" data-bs-toggle="modal" data-bs-target="#product4Modal">
+                            Ver detalles
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mensaje flotante de agregado al carrito -->
+        <div id="add-to-cart-msg" class="alert alert-success position-fixed bottom-0 end-0 me-3 mb-3"
+            style="display:none;">
+            Producto añadido al carrito.
+        </div>
+    </main>
+
+    <!-- Modals de detalles de producto (galerías) -->
+    <!-- Modal Producto 1 -->
+    <div class="modal fade" id="product1Modal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Smartphone XYZ - Imágenes</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body">
+                    <div id="carouselProduct1" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="../img/SMARTPHONE_DETALLE-1_120X800.jpeg" class="d-block w-100"
+                                    alt="Smartphone XYZ imagen 1">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="../img/SMARTPHONE_DETALLE-2_120X800.jpeg" class="d-block w-100"
+                                    alt="Smartphone XYZ imagen 2">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="../img/SMARTPHONE_LIFESTYLE_1200X800.jpeg" class="d-block w-100"
+                                    alt="Smartphone XYZ imagen 3">
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselProduct1"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Anterior</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselProduct1"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Siguiente</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal Producto 2 -->
+    <div class="modal fade" id="product2Modal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Laptop ABC - Imágenes</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body">
+                    <div id="carouselProduct2" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="..//img/LAPTOP_DETALLE1_1200X800.jpeg" class="d-block w-100"
+                                    alt="Laptop ABC imagen 1">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="../img/LAPTOP_DETALLE2_1200X800.jpeg" class="d-block w-100"
+                                    alt="Laptop ABC imagen 2">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="../img/LAPTOP_LIFESTYLE_1200X800.jpeg" class="d-block w-100"
+                                    alt="Laptop ABC imagen 3">
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselProduct2"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Anterior</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselProduct2"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Siguiente</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal Producto 3 -->
+    <div class="modal fade" id="product3Modal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Auriculares XYZ - Imágenes</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body">
+                    <div id="carouselProduct3" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="../img/AUDIFONOS_DETALLE1_1200X800.jpeg" class="d-block w-100"
+                                    alt="Auriculares XYZ imagen 1">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="../img/AUDIFONOS_DETALLE2_1200X800.jpeg" class="d-block w-100"
+                                    alt="Auriculares XYZ imagen 2">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="../img/AUDIFONOS_LIFESTYLE_1200X800.jpeg" class="d-block w-100"
+                                    alt="Auriculares XYZ imagen 3">
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselProduct3"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Anterior</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselProduct3"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Siguiente</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal Producto 4 -->
+    <div class="modal fade" id="product4Modal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Cámara DEF - Imágenes</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body">
+                    <div id="carouselProduct4" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="../img/CAMARA_DETALLE1_1200X800.jpeg" class="d-block w-100"
+                                    alt="Cámara DEF imagen 1">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="../img/CAMARA_DETALLE2_1200X800.jpeg" class="d-block w-100"
+                                    alt="Cámara DEF imagen 2">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="img/prod4-3.jpg" class="d-block w-100" alt="Cámara DEF imagen 3">
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselProduct4"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Anterior</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselProduct4"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Siguiente</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-dark text-white text-center py-3">
+        <p class="mb-0">&copy; 2025 Mi Tienda - Todos los derechos Reservados.</p>
+    </footer>
+    <!-- Scripts JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/script.js"></script>
+</body>
+
+</html>
