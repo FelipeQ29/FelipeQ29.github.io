@@ -21,7 +21,7 @@ updateCartCount();
 
 // ----- Funcionalidad: Agregar al carrito -----
 
-$('.add-to-cart').on('click', function() {
+$('.add-to-cart').on('click', function () {
   // Obtener datos del producto desde atributos data
   let productId = $(this).data('id');
   let name = $(this).data('name');
@@ -97,7 +97,7 @@ renderCartItems();
 
 // ----- Funcionalidad: Eliminar item del carrito -----
 
-$(document).on('click', '.remove-item', function() {
+$(document).on('click', '.remove-item', function () {
   let productId = $(this).data('id');
   // Eliminar del objeto carrito
   if (cart[productId]) {
@@ -113,7 +113,7 @@ $(document).on('click', '.remove-item', function() {
 
 // ----- Funcionalidad: Finalizar compra (vaciar carrito) -----
 
-$('#checkout-btn').on('click', function() {
+$('#checkout-btn').on('click', function () {
   // Si el carrito está vacío, avisar, si no, proceder
   if ($.isEmptyObject(cart)) {
     alert('El carrito está vacío.');
@@ -130,7 +130,7 @@ $('#checkout-btn').on('click', function() {
 
 // ----- Funcionalidad: Envío de Formulario de Contacto -----
 
-$('#contact-form').on('submit', function(e) {
+$('#contact-form').on('submit', function (e) {
   e.preventDefault();
   // Obtener y limpiar valores
   let name = $('#name').val().trim();
@@ -147,3 +147,22 @@ $('#contact-form').on('submit', function(e) {
   // Resetear formulario
   $(this)[0].reset();
 });
+
+// === Chatbot Widget === 
+(function () {
+  //1. Url del Space
+  const CHATBOT_URL = "https://herrerawilliamh-chatbot.hf.space";
+  //2. Botón "Abrir en nueva pestaña"
+  const openNew = document.getElementById('chatbotOpenNew');
+  if (openNew) openNew.setAttribute('href', CHATBOT_URL);
+  //3. Carga del iframe
+  const offcanvasEl = document.getElementById('chatbotOffcanvas');
+  if (offcanvasEl) {
+    offcanvasEl.addEventListener('show.bs.offcanvas', function () {
+      const frame = document.getElementById('chatbotFrame');
+      if (frame && !frame.getAttribute('src')) {
+        frame.setAttribute('src', CHATBOT_URL);
+      }
+    });
+  }
+})();

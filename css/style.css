@@ -33,7 +33,7 @@ footer {
 
 /* Sección Hero (Inicio) */
 main section.text-center {
-    background-image: url('../img/BANNER-HOME.jpeg');
+    background-image: url('../img/BANNER-HOME-FUTBOL.jpg');
     /* imagen de fondo del hero (ejemplo) */
     background-size: cover;
     background-position: center;
@@ -89,4 +89,43 @@ main section.text-center a.btn {
     }
 
     /* Puedes añadir más ajustes de diseño para escritorio aquí */
+}
+
+
+
+.chatbot-fab {
+    background-color: rgb(0, 131, 246);
+    position: fixed;
+    right: 16px;
+    bottom: 16px;
+    z-index: 1080;
+    width: 56px;
+    height: 56px;
+    border-radius: 9999px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.bi-chat-dots-fill {
+    color: white;
+}
+
+
+.offcanvas.chatbot-canvas {
+    width: 450px;
+}
+
+@media (max-width: 991.98px) {
+    .offcanvas.chatbot-canvas {
+        width: 100%;
+    }
+}
+
+.chatbot-frame {
+    border: 0;
+    width: 100%;
+    height: calc(100vh - 56px);
+
 }
